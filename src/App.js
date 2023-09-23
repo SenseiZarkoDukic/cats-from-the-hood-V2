@@ -55,6 +55,17 @@ const cats = [
     imageID: crypto.randomUUID(),
     id: "4",
   },
+  {
+    name: "Ćićko",
+    Father: "unknown",
+    Mother: "unknown",
+    color: "Orange, brown and white",
+    description:
+      "I was very aggresive to other cats until my humans castrated me. After that I am playfull instead. I was not from this hood, but came here and humans and cats somehow adopoted me. I like to be cuddled by humans, and I like to play with them very, very much! I am pretty strong and endlessly beautiful cat. I got my name from Maya for having special tail. ",
+    image: "./Images/",
+    imageID: crypto.randomUUID(),
+    id: "4",
+  },
 ];
 
 export default function App() {
