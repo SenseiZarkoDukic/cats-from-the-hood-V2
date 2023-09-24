@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 export default function AddNewCat({
   newIdNumber,
@@ -15,6 +16,24 @@ export default function AddNewCat({
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("file", file);
+
+    const config = {
+      headers: {
+        "x-api-key":
+          "live_ud6PsfCV085sI7aYIhk56O3lMNFj4cUwJY9tcJfTjZMQoGfH3esKGJ87HVAwIpLm",
+      },
+    };
+
+    axios
+      .post("https://api.thecatapi.com/v1/images/upload", formData, config)
+      .then((res) => {
+        alert("File Upload success");
+        console.log(res);
+      })
+      .catch((err) => alert(`File Upload Error: ${err.message}`));
   };
 
   function handleSubmit(e) {
@@ -86,8 +105,13 @@ export default function AddNewCat({
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
         <label>
-          Upload file:
-          <input type="file" onChange={handleFileChange} />
+          Upload image:
+          <input
+            type="file"
+            x-api-key="live_ud6PsfCV085sI7aYIhk56O3lMNFj4cUwJY9tcJfTjZMQoGfH3esKGJ87HVAwIpLm"
+            content-type="multipart/form-data"
+            onChange={handleFileChange}
+          />
         </label>
         <button
           className="btn--add-cat box-shadow-lighter"
