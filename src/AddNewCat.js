@@ -11,6 +11,11 @@ export default function AddNewCat({
   const [Mother, setMother] = useState("");
   const [color, setColor] = useState("");
   const [description, setDescription] = useState("");
+  const [file, setFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -80,6 +85,10 @@ export default function AddNewCat({
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
+        <label>
+          Upload file:
+          <input type="file" onChange={handleFileChange} />
+        </label>
         <button
           className="btn--add-cat box-shadow-lighter"
           onClick={handleSubmit}
