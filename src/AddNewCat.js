@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { useEffect } from "react";
 
 export default function AddNewCat({
   newIdNumber,
@@ -14,26 +15,15 @@ export default function AddNewCat({
   const [description, setDescription] = useState("");
   const [file, setFile] = useState(null);
 
-  const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("file", file);
-
-    const config = {
-      headers: {
-        "x-api-key":
-          "live_ud6PsfCV085sI7aYIhk56O3lMNFj4cUwJY9tcJfTjZMQoGfH3esKGJ87HVAwIpLm",
-      },
-    };
-
-    axios
-      .post("https://api.thecatapi.com/v1/images/upload", formData, config)
-      .then((res) => {
-        alert("File Upload success");
-        console.log(res);
-      })
-      .catch((err) => alert(`File Upload Error: ${err.message}`));
+  const config = {
+    headers: {
+      "x-api-key":
+        "live_ud6PsfCV085sI7aYIhk56O3lMNFj4cUwJY9tcJfTjZMQoGfH3esKGJ87HVAwIpLm",
+    },
+    "content-type": "multipart/form-data",
+  };
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
   };
 
   function handleSubmit(e) {
@@ -58,6 +48,29 @@ export default function AddNewCat({
     onAddNewCat(newCat);
   }
   console.log(allCats.length);
+
+  useEffect(() => {
+    if (!file) return;
+    const fetchPost = async () => {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("file", file);
+
+      await fetch("https://api.thecatapi.com/v1/images/upload", {
+        method: "POST",
+        headers: config.headers,
+        body: formData,
+      })
+        .then((res) => {
+          alert("File Upload success");
+          console.log(res);
+        })
+        .catch((err) => alert(`File Upload Error: ${err.message}`));
+    };
+
+    fetchPost();
+  }, [name, config.headers, file]);
+
   return (
     <div className="AddNewCat">
       <h1 className="add-cat-headline">Add New Cat</h1>
@@ -108,9 +121,8 @@ export default function AddNewCat({
           Upload image:
           <input
             type="file"
-            x-api-key="live_ud6PsfCV085sI7aYIhk56O3lMNFj4cUwJY9tcJfTjZMQoGfH3esKGJ87HVAwIpLm"
-            content-type="multipart/form-data"
-            onChange={handleFileChange}
+            name="file"
+            onChange={(e) => handleFileChange(e)}
           />
         </label>
         <button
