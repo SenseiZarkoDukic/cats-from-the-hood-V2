@@ -33,7 +33,7 @@ export default function AddNewCat({
 
     const imageID = crypto.randomUUID().toString();
     const id = (allCats.length + 1).toString();
-
+    console.log(imageID);
     if (!name || !Father || !Mother || !color || !description) return;
     const newCat = {
       name,
