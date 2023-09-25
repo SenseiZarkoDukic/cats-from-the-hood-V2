@@ -1,6 +1,7 @@
 import { useState } from "react";
-import axios from "axios";
-import { useEffect } from "react";
+import { useUploadImage } from "./useUploadImage";
+// import axios from "axios";
+// import { useEffect } from "react";
 
 export default function AddNewCat({
   newIdNumber,
@@ -8,30 +9,18 @@ export default function AddNewCat({
   onAddNewCat,
   allCats,
 }) {
-  const [name, setName] = useState("");
   const [Father, setFather] = useState("");
   const [Mother, setMother] = useState("");
   const [color, setColor] = useState("");
   const [description, setDescription] = useState("");
-  const [file, setFile] = useState(null);
-
-  const config = {
-    headers: {
-      "x-api-key":
-        "live_ud6PsfCV085sI7aYIhk56O3lMNFj4cUwJY9tcJfTjZMQoGfH3esKGJ87HVAwIpLm",
-    },
-    "content-type": "multipart/form-data",
-  };
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
-  };
+  const { file, handleFileChange, setName, name, setFile } = useUploadImage();
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    const catImage = "./Images/";
-
     const imageID = crypto.randomUUID().toString();
+
+    const catImage = `https://cdn2.thecatapi.com/images/${imageID}.jpg`;
+
     const id = (allCats.length + 1).toString();
     console.log(imageID);
     if (!name || !Father || !Mother || !color || !description) return;
@@ -48,28 +37,6 @@ export default function AddNewCat({
     onAddNewCat(newCat);
   }
   console.log(allCats.length);
-
-  useEffect(() => {
-    if (!file) return;
-    const fetchPost = async () => {
-      const formData = new FormData();
-      formData.append("name", name);
-      formData.append("file", file);
-
-      await fetch("https://api.thecatapi.com/v1/images/upload", {
-        method: "POST",
-        headers: config.headers,
-        body: formData,
-      })
-        .then((res) => {
-          alert("File Upload success");
-          console.log(res);
-        })
-        .catch((err) => alert(`File Upload Error: ${err.message}`));
-    };
-
-    fetchPost();
-  }, [name, config.headers, file]);
 
   return (
     <div className="AddNewCat">
