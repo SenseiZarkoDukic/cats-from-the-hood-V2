@@ -6,14 +6,14 @@ export default function ListOfCats({ curr, allCats }) {
           {cat === allCats[curr] ? (
             <img
               className="gallery-img box-shadow"
-              src={cat.image + cat.name + ".jpg"}
+              src={cat.image}
               alt={cat.name}
               key={cat.image_id}
             />
           ) : (
             <img
               className="gallery-img"
-              src={cat.image + cat.name + ".jpg"}
+              src={cat.image}
               alt={cat.name}
               key={cat.image_id}
             />

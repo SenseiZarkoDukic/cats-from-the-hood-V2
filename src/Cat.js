@@ -12,7 +12,7 @@ export default function Cat({
       <img
         key={image_id}
         className="cat-image"
-        src={cat.image + cat.name + ".jpg"}
+        src={cat.image}
         alt={cat.name}
       />
 

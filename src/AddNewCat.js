@@ -13,13 +13,14 @@ export default function AddNewCat({
   const [Mother, setMother] = useState("");
   const [color, setColor] = useState("");
   const [description, setDescription] = useState("");
-  const { file, handleFileChange, setName, name, setFile } = useUploadImage();
+  const { file, handleFileChange, setName, name, setFile, image } =
+    useUploadImage();
   useUploadImage();
 
   function handleSubmit(e) {
     e.preventDefault();
     const imageID = crypto.randomUUID().toString();
-    const catImage = `https://cdn2.thecatapi.com/images/${imageID}.jpg`;
+    const catImage = image;
 
     const id = (allCats.length + 1).toString();
     console.log(imageID);
