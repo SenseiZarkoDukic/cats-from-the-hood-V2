@@ -18,7 +18,7 @@ const cats = [
     color: "black and white",
     description:
       "I am sterilized cat that loves to eat very much and very often. I specially love to be cuddled, and don't mind aggresive petting as well. I love to be with my humans and cats. Like to paw aggressive male cats. I have really strong character. Dogs and puppies, don't mess with me, I have very dangerous origin, just ask around who was Kmeka!",
-    image: "./Images/",
+    image: "./Images/Masha.jpg",
     image_id: crypto.randomUUID(),
     id: "1",
   },
@@ -29,7 +29,7 @@ const cats = [
     color: "black and white",
     description:
       "I am castrated male. Truly big cat! Love to play a lot with cats and humans and to be cuddled. I have amazing friendly character. Sofia is taking the most care of me",
-    image: "./Images/",
+    image: "./Images/Tigrich.jpg",
     image_id: crypto.randomUUID(),
     id: "2",
   },
@@ -40,7 +40,7 @@ const cats = [
     color: "black and white",
     description:
       "I am a very young girl. I am one of the most joyfull cats in the hood. I love everyone, cats, dogs, humans... One of my best friends if American Pit Bull Terrier Frida. I am pretty small for my age, and Maya and Zharko call mi Mini. Olja raised me but when I grew up a bit wend to look for my pack, and now I am under Maya and Zharko's guidance.",
-    image: "./Images/",
+    image: "./Images/Emina.jpg",
     image_id: crypto.randomUUID(),
     id: "3",
   },
@@ -51,7 +51,7 @@ const cats = [
     color: "Orange, brown and white",
     description:
       "I was very aggresive to other cats until my humans castrated me. After that I am playfull instead. I was not from this hood, but came here and humans and cats somehow adopoted me. I like to be cuddled by humans, and I like to play with them very, very much! I am pretty strong and endlessly beautiful cat. I got my name from Maya for having special tail. ",
-    image: "./Images/",
+    image: "./Images/Reponja.jpg",
     image_id: crypto.randomUUID(),
     id: "4",
   },
@@ -62,7 +62,7 @@ const cats = [
     color: "Orange, brown and white",
     description:
       "I was very aggresive to other cats until my humans castrated me. After that I am playfull instead. I was not from this hood, but came here and humans and cats somehow adopoted me. I like to be cuddled by humans, and I like to play with them very, very much! I am pretty strong and endlessly beautiful cat. I got my name from Maya for having special tail. ",
-    image: "./Images/",
+    image: "./Images/Chichko.jpg",
     image_id: crypto.randomUUID(),
     id: "5",
   },
