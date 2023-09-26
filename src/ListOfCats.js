@@ -8,14 +8,14 @@ export default function ListOfCats({ curr, allCats }) {
               className="gallery-img box-shadow"
               src={cat.image + cat.name + ".jpg"}
               alt={cat.name}
-              key={cat.imageID}
+              key={cat.image_id}
             />
           ) : (
             <img
               className="gallery-img"
               src={cat.image + cat.name + ".jpg"}
               alt={cat.name}
-              key={cat.imageID}
+              key={cat.image_id}
             />
           )}
         </div>

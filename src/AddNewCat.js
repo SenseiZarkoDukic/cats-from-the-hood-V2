@@ -14,11 +14,11 @@ export default function AddNewCat({
   const [color, setColor] = useState("");
   const [description, setDescription] = useState("");
   const { file, handleFileChange, setName, name, setFile } = useUploadImage();
+  useUploadImage();
 
   function handleSubmit(e) {
     e.preventDefault();
     const imageID = crypto.randomUUID().toString();
-
     const catImage = `https://cdn2.thecatapi.com/images/${imageID}.jpg`;
 
     const id = (allCats.length + 1).toString();
@@ -31,9 +31,10 @@ export default function AddNewCat({
       color,
       description,
       image: catImage,
-      imageID: imageID,
+      image_id: imageID,
       id: id,
     };
+
     onAddNewCat(newCat);
   }
   console.log(allCats.length);

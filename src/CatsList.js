@@ -28,7 +28,7 @@ export default function CatsList({
                 curr={curr}
                 onCurr={setCurr}
                 keyId={cat.id.toString()}
-                imageID={cat.imageID}
+                image_id={cat.image_id}
                 onPrev={prev}
                 onNext={next}
               />

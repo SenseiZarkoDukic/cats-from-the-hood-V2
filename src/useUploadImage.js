@@ -22,6 +22,7 @@ export function useUploadImage() {
         const formData = new FormData();
         formData.append("name", name);
         formData.append("file", file);
+        formData.append("sub_id", "user-123");
 
         await fetch("https://api.thecatapi.com/v1/images/upload", {
           method: "POST",

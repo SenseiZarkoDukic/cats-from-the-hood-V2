@@ -4,13 +4,13 @@ export default function Cat({
   onCurrCat,
   onPrev,
   onNext,
-  imageID,
+  image_id,
   keyId,
 }) {
   return (
     <li key={keyId} className="cat-li">
       <img
-        key={imageID}
+        key={image_id}
         className="cat-image"
         src={cat.image + cat.name + ".jpg"}
         alt={cat.name}
