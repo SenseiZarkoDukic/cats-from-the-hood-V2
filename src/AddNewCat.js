@@ -46,6 +46,14 @@ export default function AddNewCat({
     };
 
     onAddNewCat(newCat);
+
+    //clearing the form
+    setName("");
+    setFather("");
+    setMother("");
+    setColor("");
+    setDescription("");
+    setFile(null); //clearing the form
   }
   console.log(allCats.length);
 
@@ -58,7 +66,9 @@ export default function AddNewCat({
           className="form-input-field"
           type="text"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
         ></input>
         <label className="form-cats-entry">Enter cat's father name: </label>
         <input
