@@ -23,6 +23,7 @@ export function useUploadImage() {
         "content-type": "multipart/form-data",
       };
       const controller = new AbortController();
+      setIsLoading(true);
       const fetchPost = async () => {
         try {
           const formData = new FormData();
@@ -38,6 +39,7 @@ export function useUploadImage() {
               signal: controller.signal,
             }
           );
+
           if (!res.ok)
             throw new Error("Something went wrong with fetching images");
           const data = await res.json();
@@ -48,8 +50,11 @@ export function useUploadImage() {
           console.log(res);
         } catch (err) {
           alert(`File Upload Error: ${err.message}`);
+        } finally {
+          setIsLoading(false);
         }
       };
+
       fetchPost();
 
       return function () {
