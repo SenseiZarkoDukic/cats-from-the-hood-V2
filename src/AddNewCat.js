@@ -113,7 +113,7 @@ export default function AddNewCat({
             onChange={(e) => handleFileChange(e)}
           />
           {isLoading && <Loader />}
-          {!isLoading && !error && image && (
+          {!isLoading && !error && image && file && (
             <p className="image-location">
               Image location is on the address: {image}
             </p>
