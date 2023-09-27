@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 export function useUploadImage() {
+  const [isLoading, setIsLoading] = useState(false);
   const [name, setName] = useState("");
   const [file, setFile] = useState(null);
   const [image, setImage] = useState("");
