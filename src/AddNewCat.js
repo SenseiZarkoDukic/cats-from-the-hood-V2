@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useUploadImage } from "./useUploadImage";
+import Loader from "./Loader";
 // import axios from "axios";
 // import { useEffect } from "react";
 
@@ -13,8 +14,16 @@ export default function AddNewCat({
   const [Mother, setMother] = useState("");
   const [color, setColor] = useState("");
   const [description, setDescription] = useState("");
-  const { file, handleFileChange, setName, name, setFile, image } =
-    useUploadImage();
+  const {
+    file,
+    handleFileChange,
+    setName,
+    name,
+    setFile,
+    image,
+    isLoading,
+    error,
+  } = useUploadImage();
   useUploadImage();
 
   function handleSubmit(e) {
@@ -93,6 +102,12 @@ export default function AddNewCat({
             name="file"
             onChange={(e) => handleFileChange(e)}
           />
+          {isLoading && <Loader />}
+          {!isLoading && !error && image && (
+            <p className="image-location">
+              Image location is on the address: {image}
+            </p>
+          )}
         </label>
         <button
           className="btn--add-cat box-shadow-lighter"

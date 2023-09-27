@@ -5,6 +5,7 @@ export function useUploadImage() {
   const [name, setName] = useState("");
   const [file, setFile] = useState(null);
   const [image, setImage] = useState("");
+  const [error, setError] = useState("");
 
   const KEY =
     "live_ud6PsfCV085sI7aYIhk56O3lMNFj4cUwJY9tcJfTjZMQoGfH3esKGJ87HVAwIpLm";
@@ -24,6 +25,7 @@ export function useUploadImage() {
       };
       const controller = new AbortController();
       setIsLoading(true);
+      setError("");
       const fetchPost = async () => {
         try {
           const formData = new FormData();
@@ -46,10 +48,15 @@ export function useUploadImage() {
           console.log(data);
           if (data.Response === "False") throw new Error("Image not found");
           setImage(data.url);
+          setError("");
           alert("File Upload success");
           console.log(res);
         } catch (err) {
-          alert(`File Upload Error: ${err.message}`);
+          if (err.name !== "AbortError") {
+            console.log(err.message);
+            alert(`File Upload Error: ${err.message}`);
+            setError(err.message);
+          }
         } finally {
           setIsLoading(false);
         }
@@ -64,5 +71,14 @@ export function useUploadImage() {
     [file, name]
   );
 
-  return { file, handleFileChange, setName, name, setFile, image };
+  return {
+    file,
+    handleFileChange,
+    setName,
+    name,
+    setFile,
+    image,
+    isLoading,
+    error,
+  };
 }
