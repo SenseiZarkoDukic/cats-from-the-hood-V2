@@ -77,6 +77,17 @@ const cats = [
     image_id: crypto.randomUUID(),
     id: "6",
   },
+  {
+    name: "Shumski",
+    Father: "unknown",
+    Mother: "unknown",
+    color: "Grey",
+    description:
+      "He came to the hood from the woods, that's the reason why we call him Shumski (From the woods). He fast joined the group, and eats the fastest and longest of all cats!",
+    image: "./Images/Zhgolja.jpg",
+    image_id: crypto.randomUUID(),
+    id: "6",
+  },
 ];
 
 export default function App() {
