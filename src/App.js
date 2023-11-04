@@ -86,7 +86,18 @@ const cats = [
       "He came to the hood from the woods, that's the reason why we call him Shumski (From the woods). He fast joined the group, and eats the fastest and longest of all cats!",
     image: "./Images/Zhgolja.jpg",
     image_id: crypto.randomUUID(),
-    id: "6",
+    id: "7",
+  },
+  {
+    name: "Petra",
+    Father: "unknown",
+    Mother: "unknown",
+    color: "Black and white",
+    description:
+      "She is one of the most beautiful cats in the hood. She is very shy and doesn't like to be petted by everyone, but when are those who she loves the most pet her, everything is allowed to them. She is very good hunter and loves to play with other cats. She is very good friend with Tigrich.",
+    image: "./Images/Zhgolja.jpg",
+    image_id: crypto.randomUUID(),
+    id: "8",
   },
 ];
 
