@@ -99,6 +99,17 @@ const cats = [
     image_id: crypto.randomUUID(),
     id: "8",
   },
+  {
+    name: "Zhickara",
+    Father: "unknown",
+    Mother: "unknown",
+    color: "Black and white",
+    description:
+      "She is one of the most beautiful cats in the hood. She is very shy and doesn't like to be petted by everyone, but when are those who she loves the most pet her, everything is allowed to them. She is very good hunter and loves to play with other cats. She is very good friend with Tigrich.",
+    image: "./Images/Zhgolja.jpg",
+    image_id: crypto.randomUUID(),
+    id: "8",
+  },
 ];
 
 export default function App() {
