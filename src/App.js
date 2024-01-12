@@ -110,6 +110,17 @@ const cats = [
     image_id: crypto.randomUUID(),
     id: "8",
   },
+  {
+    name: "Baba",
+    Father: "unknown",
+    Mother: "unknown",
+    color: "Black",
+    description:
+      "One of the most dangerous cats from the hood. Can pet her with your leg, not arm, she will attack you. She is very good hunter and loves to play with other cats. She is very good friend with the ones who fed her.",
+    image: "./Images/Baba.jpg",
+    image_id: crypto.randomUUID(),
+    id: "9",
+  },
 ];
 
 export default function App() {
