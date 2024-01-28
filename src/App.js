@@ -66,61 +66,61 @@ const cats = [
     image_id: crypto.randomUUID(),
     id: "5",
   },
-  {
-    name: "Zhgoljica",
-    Father: "unknown",
-    Mother: "unknown",
-    color: "Black and white",
-    description:
-      "The most humble and petty cat in the hood. She came too skinny and hungry, and now she is the most beautiful cat in the hood. She connected fast with Chichko and are now the best friends. Maya loves her so much!",
-    image: "./Images/Zhgoljica.jpg",
-    image_id: crypto.randomUUID(),
-    id: "6",
-  },
-  {
-    name: "Shumski",
-    Father: "unknown",
-    Mother: "unknown",
-    color: "Grey",
-    description:
-      "He came to the hood from the woods, that's the reason why we call him Shumski (From the woods). He fast joined the group, and eats the fastest and longest of all cats!",
-    image: "./Images/Shumski.jpg",
-    image_id: crypto.randomUUID(),
-    id: "7",
-  },
-  {
-    name: "Petra",
-    Father: "unknown",
-    Mother: "unknown",
-    color: "Black and white",
-    description:
-      "She is one of the most beautiful cats in the hood. She is very shy and doesn't like to be petted by everyone, but when are those who she loves the most pet her, everything is allowed to them. She is very good hunter and loves to play with other cats. She is very good friend with Tigrich.",
-    image: "./Images/Petra.jpg",
-    image_id: crypto.randomUUID(),
-    id: "8",
-  },
-  {
-    name: "Zhickara",
-    Father: "unknown",
-    Mother: "unknown",
-    color: "Black and white",
-    description:
-      "She is one of the most beautiful cats in the hood. She is very shy and doesn't like to be petted by everyone, but when are those who she loves the most pet her, everything is allowed to them. She is very good hunter and loves to play with other cats. She is very good friend with Tigrich.",
-    image: "./Images/Zhickara.jpg",
-    image_id: crypto.randomUUID(),
-    id: "8",
-  },
-  {
-    name: "Baba",
-    Father: "unknown",
-    Mother: "unknown",
-    color: "Black",
-    description:
-      "One of the most dangerous cats from the hood. Can pet her with your leg, not arm, she will attack you. She is very good hunter and loves to play with other cats. She is very good friend with the ones who fed her.",
-    image: "./Images/Baba.jpg",
-    image_id: crypto.randomUUID(),
-    id: "9",
-  },
+  // {
+  //   name: "Zhgoljica",
+  //   Father: "unknown",
+  //   Mother: "unknown",
+  //   color: "Black and white",
+  //   description:
+  //     "The most humble and petty cat in the hood. She came too skinny and hungry, and now she is the most beautiful cat in the hood. She connected fast with Chichko and are now the best friends. Maya loves her so much!",
+  //   image: "./Images/Zhgoljica.jpg",
+  //   image_id: crypto.randomUUID(),
+  //   id: "6",
+  // },
+  // {
+  //   name: "Shumski",
+  //   Father: "unknown",
+  //   Mother: "unknown",
+  //   color: "Grey",
+  //   description:
+  //     "He came to the hood from the woods, that's the reason why we call him Shumski (From the woods). He fast joined the group, and eats the fastest and longest of all cats!",
+  //   image: "./Images/Shumski.jpg",
+  //   image_id: crypto.randomUUID(),
+  //   id: "7",
+  // },
+  // {
+  //   name: "Petra",
+  //   Father: "unknown",
+  //   Mother: "unknown",
+  //   color: "Black and white",
+  //   description:
+  //     "She is one of the most beautiful cats in the hood. She is very shy and doesn't like to be petted by everyone, but when are those who she loves the most pet her, everything is allowed to them. She is very good hunter and loves to play with other cats. She is very good friend with Tigrich.",
+  //   image: "./Images/Petra.jpg",
+  //   image_id: crypto.randomUUID(),
+  //   id: "8",
+  // },
+  // {
+  //   name: "Zhickara",
+  //   Father: "unknown",
+  //   Mother: "unknown",
+  //   color: "Black and white",
+  //   description:
+  //     "She is one of the most beautiful cats in the hood. She is very shy and doesn't like to be petted by everyone, but when are those who she loves the most pet her, everything is allowed to them. She is very good hunter and loves to play with other cats. She is very good friend with Tigrich.",
+  //   image: "./Images/Zhickara.jpg",
+  //   image_id: crypto.randomUUID(),
+  //   id: "8",
+  // },
+  // {
+  //   name: "Baba",
+  //   Father: "unknown",
+  //   Mother: "unknown",
+  //   color: "Black",
+  //   description:
+  //     "One of the most dangerous cats from the hood. Can pet her with your leg, not arm, she will attack you. She is very good hunter and loves to play with other cats. She is very good friend with the ones who fed her.",
+  //   image: "./Images/Baba.jpg",
+  //   image_id: crypto.randomUUID(),
+  //   id: "9",
+  // },
 ];
 
 export default function App() {
