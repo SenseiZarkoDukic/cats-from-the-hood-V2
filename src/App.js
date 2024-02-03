@@ -66,17 +66,17 @@ const cats = [
     image_id: crypto.randomUUID(),
     id: "5",
   },
-  // {
-  //   name: "Zhgoljica",
-  //   Father: "unknown",
-  //   Mother: "unknown",
-  //   color: "Black and white",
-  //   description:
-  //     "The most humble and petty cat in the hood. She came too skinny and hungry, and now she is the most beautiful cat in the hood. She connected fast with Chichko and are now the best friends. Maya loves her so much!",
-  //   image: "./Images/Zhgoljica.jpg",
-  //   image_id: crypto.randomUUID(),
-  //   id: "6",
-  // },
+  {
+    name: "Zhgoljica",
+    Father: "unknown",
+    Mother: "unknown",
+    color: "Black and white",
+    description:
+      "The most humble and petty cat in the hood. She came too skinny and hungry, and now she is the most beautiful cat in the hood. She connected fast with Chichko and are now the best friends. Maya loves her so much!",
+    image: "./Images/Zhgoljica.jpg",
+    image_id: crypto.randomUUID(),
+    id: "6",
+  },
   // {
   //   name: "Shumski",
   //   Father: "unknown",
